@@ -27,6 +27,12 @@ namespace TestProject1
             employeePayrollOperation.addEmployeeToPayroll(employeeDetails);
             DateTime stopDateTime = DateTime.Now;
             Console.WriteLine("Duration without thread: "+ (stopDateTime-startDateTime));
+
+            //UC2
+            DateTime startDateTimeThread = DateTime.Now;
+            employeePayrollOperation.addEmployeePayrollWithThread(employeeDetails);
+            DateTime stopDateTimeThread = DateTime.Now;
+            Console.WriteLine("During with Thread: "+(stopDateTimeThread-startDateTimeThread));
         }
     }
 }
